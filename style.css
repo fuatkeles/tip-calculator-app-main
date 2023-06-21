@@ -126,134 +126,67 @@ input[type="text"] {
 }
 
 #tip-amount-value,
-#total-value
-
-* {
-  font-family: 'Space Mono', monospace;
+#total-value {
+  float: right;
+  font-size: x-large;
+  color: hsl(180, 50%, 87%);
 }
 
-body {
-  background-color: hsl(180, 50%, 87%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.input-container input[type="text"]::placeholder {
-  text-align: left;
-}
-
-#tip-buttons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-}
-
-.button-container button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: hsl(182, 53%, 23%);
-  padding: 10px;
-  border-radius: 7px;
-  border: none;
-  color: white;
-  font-size: larger;
-  font-weight: bolder;
-}
-
-button,
-input[type="text"] {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: none;
-  text-align: center;
-  background-color: hsl(189, 41%, 97%);
-  border-radius: 7px;
-  font-weight: bolder;
-  font-size: larger;
-}
-
-.input-container {
-  background-color: antiquewhite(189, 41%, 97%);
-  font-weight: bolder;
-}
-
-#main-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding-left: 2%;
-  padding-bottom: 1%;
-  border-radius: 15px;
-  height: 50%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-#summary {
-  background-color: hsl(182, 53%, 23%);
-  border-radius: 15px;
-  padding: 30px;
-  margin: 20px 20px 20px 0;
-  position: relative;
-}
-
-#tip-amount,
-#total {
-  color: white;
-}
-
-.person {
+#number-span {
+  float: right;
   font-size: smaller;
-  color: hsl(184, 14%, 56%);
 }
 
-#reset {
-  position: absolute;
-  bottom: 8%;
-  text-align: center;
-  width: 80%;
-  height: 13%;
-  left: 10%;
-  border-radius: 10px;
-  background-color: hsl(190, 28%, 31%);
-  color: hsl(186, 13%, 29%);
+.button-container :hover {
+  background-color: azure;
+  color: hsl(190, 28%, 31%);
+  border: 1px solid hsl(190, 28%, 31%);
 }
 
-#reset:disabled {
-  background-color: hsl(190, 28%, 31%);
-  color: hsl(186, 13%, 29%);
-  cursor: not-allowed;
+@media (max-width: 1440px) {
+  body {
+    padding: 20px;
+  }
+
+  #main-card {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+
+  #form-id {
+    grid-column: 1 / 2;
+    margin-top: 20px;
+  }
+
+  #summary {
+    grid-column: 2 / 3;
+    margin-bottom: 20px;
+  }
 }
 
-#reset:enabled {
-  background-color: hsl(180, 50%, 87%);
-  color: hsl(182, 53%, 23%);
-}
+@media (max-width: 375px) {
+  body {
+    padding: 10px;
+  }
 
-.button-container button.active {
-  background-color: hsl(180, 50%, 87%);
-  color: hsl(182, 53%, 23%);
-}
+  #main-card {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+  }
 
-#form-id {
-  grid-column: 1 / 2;
-  margin-top: 20px;
-}
+  #form-id {
+    grid-column: auto;
+    margin-top: 10px;
+  }
 
-#summary {
-  grid-column: 2 / 3;
-  margin-bottom: 20px;
+  #summary {
+    grid-column: auto;
+    margin-bottom: 10px;
+  }
 }
-
-#tip-amount-value,
-#total-value
