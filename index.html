@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Space+Mono">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+  <section id="main-card">
+
+    <form id="form-id">
+      <div class="icon-input">
+        <p>Bill</p>
+        <div class="input-container">
+          <input id="bill" type="text" placeholder="$" >
+          
+        </div>
+      </div>
+      <div id="tip-sect">
+        <p>Select Tip %</p>
+      
+      <div id="tip-buttons">
+        
+        <div class="button-container">
+          <button>5%</button>
+        </div>
+        <div class="button-container">
+          <button>10%</button>
+        </div>
+        <div class="button-container">
+          <button>15%</button>
+        </div>
+        <div class="button-container">
+          <button>25%</button>
+        </div>
+        <div class="button-container">
+          <button>50%</button>
+        </div>
+        <div class="input-container">
+          <input type="text" placeholder="Custom" id="custom-id">
+        </div>
+      </div>
+    </div>
+      <div id="number-people">
+        <p>Number of People <span id="number-span"></span></p>
+        <input type="text" id="people-input" required>
+      </div>
+      
+    </form>
+    <div id="summary">
+      <p id="tip-amount">Tip Amount <span id="tip-amount-value"></span></p>
+      <p class="person">/person</p>
+      <p id="total">Total <span id="total-value"></span></p>
+      <p class="person">/person</p>
+      <button id="reset" disabled>RESET</button>
+    </div>
+        
+
+  </section>
+
+  
+  
+<script src="/app.js"></script>
+</body>
+</html>
