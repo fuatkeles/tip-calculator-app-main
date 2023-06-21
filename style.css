@@ -74,7 +74,7 @@ body{
   padding-left: 2%;
   padding-bottom: 1%;
   border-radius: 15px;
- 
+  
   height: 50%;
   margin: 0 auto;
   padding: 20px;
@@ -157,7 +157,51 @@ body{
   border: 1px solid hsl(190, 28%, 31%);
 }
 
-  @media (max-width: 768px) {
-    
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
   }
-  
+
+  #main-card {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+  }
+
+  #form-id {
+    grid-column: auto;
+    margin-top: 10px;
+  }
+
+  #summary {
+    grid-column: auto;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-height: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  #main-card {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+  }
+
+  #form-id {
+    grid-column: auto;
+    margin-top: 10px;
+  }
+
+  #summary {
+    grid-column: auto;
+    margin-bottom: 10px;
+  }
+}
+
